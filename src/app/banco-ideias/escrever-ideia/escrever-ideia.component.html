@@ -1,0 +1,37 @@
+<div class="container mt-5" style="height: 100%; width: 100%">
+    <!-- inicio -->
+    <div class="">
+        <div class="row">
+            <h2>{{ titulo }}</h2>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="InserirIdeias()" novalidate>
+
+
+            <div class="row mt-2">
+                <mat-form-field class="" appearance="fill">
+                    <mat-label>Seu nome</mat-label>
+                    <input matInput placeholder="José da Silva" formControlName="nomePessoa" />
+                </mat-form-field>
+            </div>
+
+            <div class="row mt-2">
+                <mat-form-field class="" appearance="fill">
+                    <mat-label>Digite o seu Email</mat-label>
+                    <input matInput placeholder="jose.silva@..." formControlName="emailPessoa" />
+                </mat-form-field>
+            </div>
+
+            <div class="row mt-2">
+                <mat-form-field class="" appearance="fill">
+                    <mat-label>Digite a sua ideia</mat-label>
+                    <textarea matInput placeholder="minha sugestão é que..." formControlName="descIdeias"></textarea>
+                </mat-form-field>
+            </div>
+            <div class="row mt-2">
+                <p>
+                    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Inserir</button>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
