@@ -28,6 +28,8 @@ import {MatTableModule} from '@angular/material/table';
     MatInputModule,
     MatSnackBarModule,
     MatTableModule
+  ],
+  exports: [
   ]
 })
 export class BancoIdeiasModule { }

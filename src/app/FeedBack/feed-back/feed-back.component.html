@@ -12,14 +12,10 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
-            <form [formGroup]="form" (ngSubmit)="SelecionarIdeias()" novalidate>
-                <p>
-                    <button type="submit" class="btn btn-primary">Pesquisar</button>
-                </p>
-            </form>
-        </div> -->
-    
+        
+        <div class="row">
+            <app-nota-associacao></app-nota-associacao>
+        </div>
         <div >
             <div class="row">
                 <!-- tabela -->
@@ -30,12 +26,18 @@
             </div>
     
             <div class="row mat-elevation-z8">
-                <table mat-table [dataSource]="listaIdeias" matSort>
+                <table mat-table [dataSource]="listaFeedBack" matSort>
                     <ng-container matColumnDef="id">
                         <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
                             ID
                         </th>
                         <td class="text-center" mat-cell *matCellDef="let row">{{ row.id }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="data">
+                        <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Data
+                        </th>
+                        <td class="text-center" mat-cell *matCellDef="let row">{{ row.data }}</td>
                     </ng-container>
                     <ng-container matColumnDef="nome">
                         <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
@@ -43,19 +45,19 @@
                         </th>
                         <td class="text-center" mat-cell *matCellDef="let row">{{ row.nome }}</td>
                     </ng-container>
-                    <ng-container matColumnDef="email">
+                    <ng-container matColumnDef="nota">
                         <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
-                            Email escritor
+                            Nota
                         </th>
-                        <td class="text-center" mat-cell *matCellDef="let row">{{ row.email }}</td>
+                        <td class="text-center" mat-cell *matCellDef="let row">{{ row.nota }}</td>
                     </ng-container>
                     <ng-container matColumnDef="descricao">
                         <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
-                            Ideia
+                            FeedBack
                         </th>
                         <td class="text-center" mat-cell *matCellDef="let row">{{ row.descricao }}</td>
                     </ng-container>
-    
+
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     
@@ -68,7 +70,7 @@
                 </table>
     
                 <mat-paginator [pageSizeOptions]="[50, 100, 250, 500, 1000]"
-                    aria-label="Selecionado pagina de lista ideias"></mat-paginator>
+                    aria-label="Selecionado pagina de lista FeedBack"></mat-paginator>
             </div>
         </div>
     </div>

@@ -35,6 +35,7 @@ export class BancoIdeiasComponent implements OnInit {
 
   ngOnInit(): void {
     this.BuildForm();
+    this.SelecionarIdeias();
   }
 
   BuildForm(): void {

@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Associação</a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <fa-icon icon="bars" style="color: white;"></fa-icon>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
@@ -21,12 +21,27 @@
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           Ideias
         </a>
-        
-
-
         <div class="dropdown-menu">
           <li><a class="dropdown-item" href="/banco-ideias/listar-ideias">Listar ideias</a></li>
           <li><a class="dropdown-item" href="/banco-ideias/escrever-ideias">Escrever Sugestão</a></li>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Feedback
+        </a>
+        <div class="dropdown-menu">
+          <li><a class="dropdown-item" href="/feed-back/lista-feedback">Listar Feedback</a></li>
+          <li><a class="dropdown-item" href="/feed-back/escrever-feedback">Escrever Feedback</a></li>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Gerenciar
+        </a>
+        <div class="dropdown-menu">
+          <li><a class="dropdown-item" href="/tipo-eventos/gerenciar-tipo-eventos">Modificar tipo de eventos</a></li>
+          <li><a class="dropdown-item" href="/tipo-status/gerenciar-tipo-status">Modificar tipo de Status dos eventos</a></li>
         </div>
       </li>
     </ul>

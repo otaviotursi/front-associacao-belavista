@@ -1,0 +1,63 @@
+<div class="container mt-5" style="height: 100%; width: 100%">
+    <!-- inicio -->
+    <div class="">
+        <div class="row">
+            <h2>{{ titulo }}</h2>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="InserirFeedback()" novalidate>
+
+
+            <div class="row mt-2">
+                <mat-form-field class="" appearance="fill">
+                    <mat-label>Seu nome</mat-label>
+                    <input matInput placeholder="José da Silva" formControlName="nome" />
+                </mat-form-field>
+            </div>
+
+            <div class="row mt-2">
+                <mat-form-field class="" appearance="fill">
+                    <mat-label>Digite o seu feedback</mat-label>
+                    <textarea matInput placeholder="meu feedback é que..." formControlName="descricao"></textarea>
+                </mat-form-field>
+            </div>
+
+            <div class="row mt-2">
+                <mat-form-field appearance="fill">
+                  <mat-label>Data da Recebiveis</mat-label>
+                  <input
+                    matInput
+                    [matDatepicker]="picker"
+                    formControlName="data"
+                  />
+                  <mat-hint>DD/MM/YYYY</mat-hint>
+                  <mat-datepicker-toggle
+                    matSuffix
+                    [for]="picker"
+                  ></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+      
+
+            <div class="row mt-2">
+                <mat-form-field appearance="fill">
+                  <mat-label>Nota de 1 à 10</mat-label>
+                  <mat-select formControlName="nota" name="nota">
+                    <mat-option
+                      *ngFor="let nota of listaNota"
+                      [value]="nota.chave"
+                    >
+                      {{ nota.valor }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+            <div class="row mt-2">
+                <p>
+                    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Inserir</button>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
