@@ -1,0 +1,66 @@
+<div class="container mt-5 text-center">
+    <div class="">
+        
+        <div class="row">
+            <h2>{{ titulo }}</h2>
+        </div>
+        <div >
+
+            <div class="row">
+                <!-- tabela -->
+                <mat-form-field appearance="standard">
+                    <mat-label>Filtro</mat-label>
+                    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. José" #input />
+                </mat-form-field>
+            </div>
+    
+            <div class="row mat-elevation-z8">
+                <table mat-table [dataSource]="listaEventos" matSort>
+                    <ng-container class="col-2 "  matColumnDef="id">
+                        <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
+                            ID
+                        </th>
+                        <td class="text-center" mat-cell *matCellDef="let row">{{ row.id }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="evento">
+                        <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Evento
+                        </th>
+                        <td class="text-center" mat-cell *matCellDef="let row">{{ ObtemNomeDoEvento(row.ID_TIPO_EVENTO) }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="diaSemana">
+                        <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Dia da Semana
+                        </th>
+                        <td class="text-center" mat-cell *matCellDef="let row">{{ ObtemDiaDaSemana(row.diaSemana) }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="horaInicio">
+                        <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Hora Inicio
+                        </th>
+                        <td class="text-center" mat-cell *matCellDef="let row">{{ row.HORA_INICIO }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="horaFim">
+                        <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
+                            Hora Fim
+                        </th>
+                        <td class="text-center" mat-cell *matCellDef="let row">{{ row.HORA_FIM }}</td>
+                    </ng-container>
+    
+    
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    
+                    <!-- Row shown when there is no matching data. -->
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="5">
+                            Não encontramos dados com esse filtro"{{ input.value }}"
+                        </td>
+                    </tr>
+                </table>
+                <mat-paginator [pageSizeOptions]="[50, 100, 250, 500, 1000]"
+                    aria-label="Selecionado pagina de lista Eventos"></mat-paginator>
+            </div>
+        </div>
+    </div>
+</div>

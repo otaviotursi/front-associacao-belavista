@@ -13,6 +13,8 @@ const routes: Routes = [
   { path: 'feed-back', loadChildren: () => import('./FeedBack/feed-back.module').then(m => m.FeedBackModule) },
   { path: 'tipo-eventos', loadChildren: () => import('./TiposEventos/tipo-eventos.module').then(m => m.TipoEventosModule) },
   { path: 'tipo-status', loadChildren: () => import('./TiposStatus/tipo-status.module').then(m => m.TipoStatusModule) },
+  { path: 'login', loadChildren: () => import('./Usuario/gerencia-login.module').then(m => m.GerenciaLoginModule) },
+  { path: 'informacoes-gerais', loadChildren: () => import('./informacoes-gerais/informacoes-gerais.module').then(m => m.InformacoesGeraisModule) },
 
 ];
 const routesComponent: Routes = [{ path: 'pagina', component: PaginaInicialComponent }];

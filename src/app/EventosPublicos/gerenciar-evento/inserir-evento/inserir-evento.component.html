@@ -1,0 +1,77 @@
+<div class="container mt-5" style="height: 100%; width: 100%">
+    <!-- inicio -->
+    <div class="">
+        <div class="row">
+            <h2>{{ titulo }}</h2>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="InserirEvento()" novalidate>
+
+
+            <div class="row mt-2">
+                <mat-form-field class="" appearance="fill">
+                    <mat-label>Dia da Semana</mat-label>
+                    <mat-select formControlName="idTipoSemana" name="diasDaSemana">
+                        <mat-option *ngFor="let dias of listaDiasDaSemana" [value]="dias.chave">
+                            {{dias.valor}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="row mt-2">
+                <mat-form-field class="" appearance="fill">
+                    <mat-label>Tipo do Evento</mat-label>
+                    <mat-select formControlName="idTipoEvento" name="tipoEvento">
+                        <mat-option *ngFor="let tipoEvento of listaTipoEvento" [value]="tipoEvento.id">
+                            {{ tipoEvento.nome }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="row mt-2">
+                <mat-form-field appearance="fill">
+                    <mat-label>Inserir periodo do evento</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate formControlName="dataInicial" placeholder="Start date">
+                        <input matEndDate formControlName="dataFinal" placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-hint>DD/MM/YYYY – DD/MM/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+
+                </mat-form-field>
+            </div>
+            <div class="row mt-2">
+              <mat-form-field class="" appearance="fill">
+                <mat-label>Hora de inicio do evento</mat-label>
+                <input matInput type="time" formControlName="horaInicio" />
+              </mat-form-field>
+            </div>
+            <div class="row mt-2">
+              <mat-form-field class="" appearance="fill">
+                <mat-label>Hora Fim do evento</mat-label>
+                <input matInput type="time" formControlName="horaFim" />
+              </mat-form-field>
+            </div>
+            <!-- <div class="row mt-2">
+                <mat-form-field appearance="fill" formControlName="horaInicio">
+                    <mat-label>Hora de inicio do evento</mat-label>
+                    <input type="time"  placeholder="Start date">
+                </mat-form-field>
+            </div>
+            <div class="row mt-2">
+                <mat-form-field appearance="fill" formControlName="horaFim" >
+                    <mat-label>Hora de Fim do evento</mat-label>
+                    <input type="time" placeholder="End date">
+                </mat-form-field>
+            </div> -->
+
+
+
+            <div class="row mt-2">
+                <p>
+                    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Inserir</button>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>

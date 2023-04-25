@@ -9,7 +9,8 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { FeedBackModule } from './FeedBack/feed-back.module';
-import { BancoIdeiasModule } from './banco-ideias/banco-ideias.module';
+import { InformacoesGeraisModule } from './informacoes-gerais/informacoes-gerais.module';
+import { EventosPublicosModule } from './EventosPublicos/eventos-publicos.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,8 @@ import { BancoIdeiasModule } from './banco-ideias/banco-ideias.module';
     HttpClientModule,
     FontAwesomeModule,
     FeedBackModule,
+    InformacoesGeraisModule,
+    EventosPublicosModule
   ],
   providers: [
     MatNativeDateModule,

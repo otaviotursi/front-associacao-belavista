@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { TipoEventoRequest,TipoEventoResponse } from '../Model/TipoEvento';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,12 +14,8 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-
-@Injectable({
-  providedIn: 'root'
-})
 export class TiposEventosService {
-  private urlApi = 'https://localhost:44322/api/';  // URL to web api
+  private urlApi = environment.communication.backend.url;  // URL to web api
   
   constructor(private http: HttpClient) { }
 

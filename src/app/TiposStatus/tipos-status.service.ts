@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { TipoStatusRequest,TipoStatusResponse } from '../Model/TipoStatus';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -18,7 +19,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TiposStatusService {
-  private urlApi = 'https://localhost:44322/api/';  // URL to web api
+  private urlApi = environment.communication.backend.url;  // URL to web api
   
   constructor(private http: HttpClient) { }
 

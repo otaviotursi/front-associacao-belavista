@@ -1,10 +1,11 @@
 <nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#">Associação</a>
-  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <fa-icon icon="bars" style="color: white;"></fa-icon>
+  <a class="navbar-brand" href="#"><img src="/assets/logo_ambevi.jpg"  width="30" height="30" class="d-inline-block align-top" alt="Associação"></a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <fa-icon icon="bars" style="color: white;"></fa-icon>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -13,39 +14,53 @@
           Eventos
         </a>
         <div class="dropdown-menu">
-          <li><a class="dropdown-item" href="/eventos-publicos/lista-evento">Listar Eventos</a></li>
-          <li><a class="dropdown-item" href="/eventos-publicos/gerenciar-evento">Gerenciar Eventos</a></li>
-        </div>
+      <li><a class="dropdown-item " href="/eventos-publicos/lista-evento">Listar Eventos</a></li>
+      <li><a class="dropdown-item" name="libera-funcao" href="/eventos-publicos/gerenciar-evento">Gerenciar Eventos</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-          Ideias
-        </a>
-        <div class="dropdown-menu">
-          <li><a class="dropdown-item" href="/banco-ideias/listar-ideias">Listar ideias</a></li>
-          <li><a class="dropdown-item" href="/banco-ideias/escrever-ideias">Escrever Sugestão</a></li>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-          Feedback
-        </a>
-        <div class="dropdown-menu">
-          <li><a class="dropdown-item" href="/feed-back/lista-feedback">Listar Feedback</a></li>
-          <li><a class="dropdown-item" href="/feed-back/escrever-feedback">Escrever Feedback</a></li>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-          Gerenciar
-        </a>
-        <div class="dropdown-menu">
-          <li><a class="dropdown-item" href="/tipo-eventos/gerenciar-tipo-eventos">Modificar tipo de eventos</a></li>
-          <li><a class="dropdown-item" href="/tipo-status/gerenciar-tipo-status">Modificar tipo de Status dos eventos</a></li>
-        </div>
-      </li>
-    </ul>
+  </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+      Ideias
+    </a>
+    <div class="dropdown-menu">
+  <li><a class="dropdown-item" name="libera-funcao" href="/banco-ideias/listar-ideias">Listar ideias</a></li>
+  <li><a class="dropdown-item" href="/banco-ideias/escrever-ideias">Escrever Sugestão</a></li>
+  </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+      Feedback
+    </a>
+    <div class="dropdown-menu">
+  <li><a class="dropdown-item" name="libera-funcao" href="/feed-back/lista-feedback">Listar Feedback</a></li>
+  <li><a class="dropdown-item" href="/feed-back/escrever-feedback">Escrever Feedback</a></li>
+  </div>
+  </li>
+  <li class="nav-item dropdown" name="libera-funcao">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+      Gerenciar
+    </a>
+    <div class="dropdown-menu">
+  <li><a class="dropdown-item" name="libera-funcao" href="/tipo-eventos/gerenciar-tipo-eventos">Modificar tipo de
+      eventos</a></li>
+  <li><a class="dropdown-item" name="libera-funcao" href="/tipo-status/gerenciar-tipo-status">Modificar tipo de Status
+      dos eventos</a></li>
+  </div>
+  </li>
+
+  <li class="nav-item"><a class="nav-link" href="informacoes-gerais/sobre-nos">Sobre nós</a></li>
+  <li class="nav-item"><a class="nav-link" href="informacoes-gerais/contate-nos">Nosso Contato</a></li>
+
+
+
+
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <a class="btn btn-outline-success my-2 my-sm-0 desaparece" href="/login">login</a>
+  </form>
   </div>
 </nav>
 
 <router-outlet></router-outlet>
+<app-informacoes-gerais></app-informacoes-gerais>
