@@ -12,7 +12,7 @@
           <div class="row mt-2">
             <mat-form-field appearance="fill">
               <mat-label>Tipo Status</mat-label>
-              <mat-select formControlName="tipoStatusValor" name="tipoStatus">
+              <mat-select formControlName="idItem" name="tipoStatus">
                 <mat-option
                 *ngFor="let item of listaId"
                 [value]="item"
@@ -25,7 +25,7 @@
   
           <div class="row mt-2">
             <p>
-                  <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Inserir</button>
+                  <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Excluir</button>
             </p>
           </div>
         </form>

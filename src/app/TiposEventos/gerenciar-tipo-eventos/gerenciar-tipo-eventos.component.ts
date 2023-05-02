@@ -16,7 +16,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 export class GerenciarTipoEventosComponent implements OnInit {
 
   titulo = "Lista de Tipos de eventos";
-  displayedColumns: string[] = ['id', 'nomeEvento', 'status'];
+  displayedColumns: string[] = ['id', 'nomeEvento', 'status', 'Gerenciar'];
   listaTipoEventos: MatTableDataSource<TipoEventoResponse>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

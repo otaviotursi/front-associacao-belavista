@@ -33,18 +33,29 @@ export class AppComponent implements AfterViewInit {
   }
 
   LiberarPermissoes() {
-    if (this.userService.exists()) {
+    console.log('LiberarPermissoes: ' + this.userService.exists());
+    let elements = document.getElementsByName('libera-funcao');
+
+    for (var i = 0; i < elements.length; i++) {
+      var div = elements[i];
+      div.hidden = true;
+
+      // div.setAttribute('style', 'visibility: hidden;');
+    }
+
+    if (this.userService.exists() || this.userService.exists() != null) {
       let listaPermissao = this.VerificarAcessoUsuario();
       // listaPermissao = [1]; //se descomentar, vai deixar por padrão invisivel
       listaPermissao.forEach((element) => {
-        if (element == 1) { //tipo admin
+        if (element == 1) {
+          //tipo admin
 
           let elements = document.getElementsByName('libera-funcao');
 
           for (var i = 0; i < elements.length; i++) {
             var div = elements[i];
-
-            div.setAttribute('style', 'visibility: hidden;');
+            div.hidden = false;
+            // div.setAttribute('style', 'visibility: visible;');
           }
         }
       });

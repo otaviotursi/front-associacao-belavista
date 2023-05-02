@@ -7,9 +7,9 @@ import { EventosPublicosResponse } from 'src/app/Model/EventosPublicos';
 import { TipoEventoResponse } from 'src/app/Model/TipoEvento';
 import { TiposEventosService } from 'src/app/TiposEventos/tipos-eventos.service';
 import { BackAcoesEventosPublicosService } from '../back-acoes-eventos-publicos.service';
-import { Location } from '@angular/common';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Dict } from 'src/app/Model/Dict';
+import { DatePipe, Location } from '@angular/common';
 
 @Component({
   selector: 'app-gerenciar-evento',
@@ -18,7 +18,7 @@ import { Dict } from 'src/app/Model/Dict';
 })
 export class GerenciarEventoComponent implements OnInit {
   titulo = 'Gerenciar eventos da associação';
-  datePipe: any;
+  datePipe = new DatePipe('en-US');
   diaInicio: any;
   diaFim: any;
   form: any;
@@ -28,6 +28,7 @@ export class GerenciarEventoComponent implements OnInit {
   displayedColumns: string[] = [
     'id',
     'evento',
+    'dataEvento',
     'diaSemana',
     'horaInicio',
     'horaFim',
@@ -86,6 +87,7 @@ export class GerenciarEventoComponent implements OnInit {
     this.eventosPublicosService
       .BuscarTodosEventosPorData(this.diaInicio, this.diaFim)
       .subscribe((data) => {
+        console.log(data);
         this.listaEventos = new MatTableDataSource(data);
         this.listaEventos.sort = this.sort;
         this.listaEventos.paginator = this.paginator;

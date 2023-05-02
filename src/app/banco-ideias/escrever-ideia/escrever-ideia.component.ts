@@ -30,7 +30,7 @@ export class EscreverIdeiaComponent implements OnInit {
 
   InserirIdeias(){
     var ideias = new IdeiasRequest(this.form.value.nomePessoa, this.form.value.descIdeias, this.form.value.emailPessoa);
-    this.bancoIdeiasService.InserirIdeias(ideias).subscribe(response => this.openSnackBar(response, 'OK'));
+    this.bancoIdeiasService.InserirIdeias(ideias).subscribe(response => this.openSnackBar(response?.mensagem, 'OK'));
   }
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);

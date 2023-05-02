@@ -7,7 +7,7 @@ export const environment: any = {
   production: false,
   communication: {
     backend: {
-      url: 'https://localhost:44322/api/'
+      url: 'https://localhost:44315/api/'
     }
   }
 

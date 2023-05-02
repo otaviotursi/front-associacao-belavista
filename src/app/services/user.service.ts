@@ -16,7 +16,7 @@ export class UserService {
     if(retorno != null){
       return retorno;
     }
-    return 'null'; //mudar para null sem aspas qnd ligar com o back
+    return null; //mudar para null sem aspas qnd ligar com o back
   }
 
 }

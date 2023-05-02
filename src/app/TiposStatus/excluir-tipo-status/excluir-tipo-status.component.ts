@@ -42,7 +42,7 @@ export class ExcluirTipoStatusComponent implements OnInit {
 
   ExcluirStatus(): void{
     var infosPreenchidas = this.form.value;
-    this.tipoStatusService.ExcluirStatus(infosPreenchidas.idItem).subscribe(response => this.openSnackBar(response, 'OK'));
+    this.tipoStatusService.ExcluirStatus(infosPreenchidas.idItem).subscribe(response => this.openSnackBar(response?.mensagem, 'OK'));
   }
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);

@@ -1,14 +1,14 @@
 export class TipoStatusRequest{
-    nome: string = "";
+    status: string = "";
 
     constructor(
-        nome: string,
+        status: string,
         ){
 
-        this.nome = nome;
+        this.status = status;
     }
 }
 export class TipoStatusResponse{
     id: number = 0;
-    nome: string = "";
+    status: string = "";
 }

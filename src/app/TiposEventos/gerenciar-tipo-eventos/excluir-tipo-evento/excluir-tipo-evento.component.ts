@@ -43,7 +43,7 @@ export class ExcluirTipoEventoComponent implements OnInit {
   
   ExcluirEvento(): void{
     var infosPreenchidas = this.form.value;
-    this.tipoEventosService.ExcluirEvento(infosPreenchidas.idItem).subscribe(response => this.openSnackBar(response, 'OK'));
+    this.tipoEventosService.ExcluirEvento(infosPreenchidas.idItem).subscribe(response => this.openSnackBar(response?.mensagem, 'OK'));
   }
 
 

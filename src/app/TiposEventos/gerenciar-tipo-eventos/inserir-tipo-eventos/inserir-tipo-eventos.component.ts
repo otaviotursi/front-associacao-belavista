@@ -21,6 +21,7 @@ export class InserirTipoEventosComponent implements OnInit {
 
   ngOnInit(): void {
     this.BuildForm();
+    this.BuscarTodosStatus();
   }
 
   BuildForm(): void {
@@ -30,8 +31,8 @@ export class InserirTipoEventosComponent implements OnInit {
     });
   }
   
-  BuscarStatusPorId(){
-    
+  BuscarTodosStatus(){
+    console.log("teste");
     this.tipoStatusService.SelecionarTodosTiposStatus().subscribe( data => {
       console.log(data);
       this.listaTipoStatus = data;
@@ -42,7 +43,7 @@ export class InserirTipoEventosComponent implements OnInit {
   InserirEvento(): void{
     var infosPreenchidas = this.form.value;
     var novoEvento = new TipoEventoRequest(infosPreenchidas.nomeEvento,infosPreenchidas.tipoStatus );
-    this.tipoEventosService.InserirEvento(novoEvento).subscribe(response => this.openSnackBar(response, 'OK'));
+    this.tipoEventosService.InserirEvento(novoEvento).subscribe(response => this.openSnackBar(response?.mensagem, 'OK'));
   }
 
 

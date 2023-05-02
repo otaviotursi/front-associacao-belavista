@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Location } from '@angular/common';
+import { DatePipe, Location } from '@angular/common';
+
 import { FormBuilder, Validators } from '@angular/forms';
 import { BackAcoesEventosPublicosService } from '../back-acoes-eventos-publicos.service';
 import { MatTableDataSource } from '@angular/material/table';
@@ -16,7 +17,8 @@ import { TipoEventoResponse } from 'src/app/Model/TipoEvento';
 })
 export class EventosPublicosComponent implements OnInit {
   titulo = 'Eventos da associação (próximos 30 dias)';
-  datePipe: any;
+  datePipe = new DatePipe('en-US');
+
   diaInicio: any;
   diaFim: any;
   form: any;
@@ -24,6 +26,7 @@ export class EventosPublicosComponent implements OnInit {
   displayedColumns: string[] = [
     'id',
     'evento',
+    'dataEvento',
     'diaSemana',
     'horaInicio',
     'horaFim',
@@ -44,10 +47,12 @@ export class EventosPublicosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.diaInicio = this.datePipe.transform(new Date(), 'yyyy-MM-dd', 'es-ES');
+
     var dataFim = new Date();
     dataFim.setDate(dataFim.getDate() + 30);
-    this.diaInicio = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
-    this.diaFim = this.datePipe.transform(dataFim, 'yyyy-MM-dd');
+    this.diaFim = this.datePipe.transform(dataFim, 'yyyy-MM-dd', 'es-ES');
+
     this.BuildForm();
     this.BuscarTipoEventos();
     this.BuscarTodosEventos();

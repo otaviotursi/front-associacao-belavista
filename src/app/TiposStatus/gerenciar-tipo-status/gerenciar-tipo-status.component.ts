@@ -16,7 +16,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 export class GerenciarTipoStatusComponent implements OnInit {
 
   titulo = "Lista de Tipos de Status";
-  displayedColumns: string[] = ['id', 'status'];
+  displayedColumns: string[] = ['id', 'status', 'Gerenciar'];
   listaTipoStatus: MatTableDataSource<TipoStatusResponse>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

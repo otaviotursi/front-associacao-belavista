@@ -29,7 +29,7 @@ export class InserirTipoStatusComponent implements OnInit {
   InserirStatus(): void{
     var infosPreenchidas = this.form.value;
     var novoStatus = new TipoStatusRequest(infosPreenchidas.nomeStatus);
-    this.tipoStatusService.InserirStatus(novoStatus).subscribe(response => this.openSnackBar(response, 'OK'));
+    this.tipoStatusService.InserirStatus(novoStatus).subscribe(response => this.openSnackBar(response?.mensagem, 'OK'));
   }
 
   openSnackBar(message: string, action: string) {

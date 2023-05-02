@@ -22,5 +22,5 @@ export class FeedBackResponse{
     nome: string = "";
     descricao: string = "";
     nota: number = 0;
-    data?: Date;
+    data?: string = "";
 }

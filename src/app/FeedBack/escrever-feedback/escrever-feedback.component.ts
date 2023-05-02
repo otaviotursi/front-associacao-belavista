@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { FeedBackRequest } from 'src/app/Model/Feedback';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { Dict } from 'src/app/Model/Dict';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-escrever-feedback',
@@ -12,6 +13,7 @@ import { Dict } from 'src/app/Model/Dict';
 })
 export class EscreverFeedbackComponent implements OnInit {
   titulo = "Escreva o seu feedback para nós";
+  datePipe = new DatePipe('en-US');
 
   form?: any;
   listaNota: Dict[] = [
@@ -37,15 +39,15 @@ export class EscreverFeedbackComponent implements OnInit {
   BuildForm(): void {
     this.form = this.formBuilder.group({
       nome: [''],
-      data: ['', Validators.required],
+      // data: ['', Validators.required],
       nota: [0, Validators.required],
       descricao: ['', Validators.required],
     });
   }
 
   InserirFeedback(){
-    var feedback = new FeedBackRequest(this.form.value.nome, this.form.value.descricao, this.form.value.nota, this.form.value.data);
-    this.feedBackService.InserirFeedBack(feedback).subscribe(response => this.openSnackBar(response, 'OK'));
+    var feedback = new FeedBackRequest(this.form.value.nome, this.form.value.descricao, this.form.value.nota,     new Date());
+    this.feedBackService.InserirFeedBack(feedback).subscribe(response => this.openSnackBar(response?.mensagem, 'OK'));
   }
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);

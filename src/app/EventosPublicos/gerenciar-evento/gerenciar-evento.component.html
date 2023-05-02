@@ -50,25 +50,31 @@
                     <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
                         Evento
                     </th>
-                    <td class="text-center" mat-cell *matCellDef="let row">{{ ObtemNomeDoEvento(row.ID_TIPO_EVENTO) }}</td>
+                    <td class="text-center" mat-cell *matCellDef="let row">{{ ObtemNomeDoEvento(row.iD_TIPO_EVENTO) }}</td>
+                </ng-container>
+                <ng-container matColumnDef="dataEvento">
+                    <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
+                        Data
+                    </th>
+                    <td class="text-center" mat-cell *matCellDef="let row">{{ row.diA_INICIO }}</td>
                 </ng-container>
                 <ng-container matColumnDef="diaSemana">
                     <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
                         Dia da Semana
                     </th>
-                    <td class="text-center" mat-cell *matCellDef="let row">{{ ObtemDiaDaSemana(row.diaSemana) }}</td>
+                    <td class="text-center" mat-cell *matCellDef="let row">{{ ObtemDiaDaSemana(row.iD_TIPO_SEMANA) }}</td>
                 </ng-container>
                 <ng-container matColumnDef="horaInicio">
                     <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
                         Hora Inicio
                     </th>
-                    <td class="text-center" mat-cell *matCellDef="let row">{{ row.HORA_INICIO }}</td>
+                    <td class="text-center" mat-cell *matCellDef="let row">{{ row.horA_INICIO }}</td>
                 </ng-container>
                 <ng-container matColumnDef="horaFim">
                     <th class="text-center" mat-header-cell *matHeaderCellDef mat-sort-header>
                         Hora Fim
                     </th>
-                    <td class="text-center" mat-cell *matCellDef="let row">{{ row.HORA_FIM }}</td>
+                    <td class="text-center" mat-cell *matCellDef="let row">{{ row.horA_FIM }}</td>
                 </ng-container>
                 <ng-container matColumnDef="Gerenciar">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Gerenciar</th>

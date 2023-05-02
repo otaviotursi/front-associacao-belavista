@@ -45,6 +45,7 @@ export class InserirEventoComponent implements OnInit {
     this.diaFim = this.datePipe.transform(dataFim, 'yyyy-MM-dd');
 
     this.BuildForm();
+    this.BuscarTipoEventos();
   }
 
   BuildForm() {
@@ -65,14 +66,16 @@ export class InserirEventoComponent implements OnInit {
   }
   InserirEvento() {
     var dados = new EventosPublicosResponse();
-    dados.ID_TIPO_EVENTO = this.form.value.idTipoEvento;
-    dados.ID_TIPO_SEMANA = this.form.value.idTipoSemana;
-    dados.DIA_INICIO = this.form.value.dataInicial;
-    dados.DIA_FIM = this.form.value.dataFinal;
-    dados.HORA_INICIO = this.form.value.horaInicio;
-    dados.HORA_FIM = this.form.value.horaFim;
+    dados.iD_TIPO_EVENTO = this.form.value.idTipoEvento;
+    dados.iD_TIPO_SEMANA = this.form.value.idTipoSemana;
+    dados.diA_INICIO = this.form.value.dataInicial;
+    dados.diA_FIM = this.form.value.dataFinal;
+    dados.horA_INICIO = this.form.value.horaInicio;
+    dados.horA_FIM = this.form.value.horaFim;
+    let str = JSON.stringify(dados);
+    console.log("inserir evento: " + str);
     this.eventosPublicosService.InserirEvento(dados).subscribe((data) => {
-      this.openSnackBar(data, 'OK');
+      this.openSnackBar(data?.mensagem, 'OK');
     });
   }
 
