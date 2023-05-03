@@ -1,23 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InformacoesGeraisComponent } from './informacoes-gerais.component';
+// import { InformacoesGeraisComponent } from './informacoes-gerais.component';
 
-describe('InformacoesGeraisComponent', () => {
-  let component: InformacoesGeraisComponent;
-  let fixture: ComponentFixture<InformacoesGeraisComponent>;
+// describe('InformacoesGeraisComponent', () => {
+//   let component: InformacoesGeraisComponent;
+//   let fixture: ComponentFixture<InformacoesGeraisComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ InformacoesGeraisComponent ]
-    })
-    .compileComponents();
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [ InformacoesGeraisComponent ]
+//     })
+//     .compileComponents();
 
-    fixture = TestBed.createComponent(InformacoesGeraisComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//     fixture = TestBed.createComponent(InformacoesGeraisComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

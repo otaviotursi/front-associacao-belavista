@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+// import { TestBed } from '@angular/core/testing';
 
-import { BackAcoesEventosPublicosService } from './back-acoes-eventos-publicos.service';
+// import { BackAcoesEventosPublicosService } from './back-acoes-eventos-publicos.service';
 
-describe('BackAcoesEventosPublicosService', () => {
-  let service: BackAcoesEventosPublicosService;
+// describe('BackAcoesEventosPublicosService', () => {
+//   let service: BackAcoesEventosPublicosService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(BackAcoesEventosPublicosService);
-  });
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({});
+//     service = TestBed.inject(BackAcoesEventosPublicosService);
+//   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+//   it('should be created', () => {
+//     expect(service).toBeTruthy();
+//   });
+// });

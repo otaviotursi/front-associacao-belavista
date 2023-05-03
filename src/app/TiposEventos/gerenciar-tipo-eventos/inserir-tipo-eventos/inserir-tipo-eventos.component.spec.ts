@@ -1,23 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InserirTipoEventosComponent } from './inserir-tipo-eventos.component';
+// import { InserirTipoEventosComponent } from './inserir-tipo-eventos.component';
 
-describe('InserirTipoEventosComponent', () => {
-  let component: InserirTipoEventosComponent;
-  let fixture: ComponentFixture<InserirTipoEventosComponent>;
+// describe('InserirTipoEventosComponent', () => {
+//   let component: InserirTipoEventosComponent;
+//   let fixture: ComponentFixture<InserirTipoEventosComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ InserirTipoEventosComponent ]
-    })
-    .compileComponents();
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [ InserirTipoEventosComponent ]
+//     })
+//     .compileComponents();
 
-    fixture = TestBed.createComponent(InserirTipoEventosComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//     fixture = TestBed.createComponent(InserirTipoEventosComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

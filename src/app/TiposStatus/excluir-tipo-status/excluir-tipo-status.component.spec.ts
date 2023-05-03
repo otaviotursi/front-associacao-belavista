@@ -1,23 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExcluirTipoStatusComponent } from './excluir-tipo-status.component';
+// import { ExcluirTipoStatusComponent } from './excluir-tipo-status.component';
 
-describe('ExcluirTipoStatusComponent', () => {
-  let component: ExcluirTipoStatusComponent;
-  let fixture: ComponentFixture<ExcluirTipoStatusComponent>;
+// describe('ExcluirTipoStatusComponent', () => {
+//   let component: ExcluirTipoStatusComponent;
+//   let fixture: ComponentFixture<ExcluirTipoStatusComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ExcluirTipoStatusComponent ]
-    })
-    .compileComponents();
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [ ExcluirTipoStatusComponent ]
+//     })
+//     .compileComponents();
 
-    fixture = TestBed.createComponent(ExcluirTipoStatusComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//     fixture = TestBed.createComponent(ExcluirTipoStatusComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

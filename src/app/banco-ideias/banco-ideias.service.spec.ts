@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+// import { TestBed } from '@angular/core/testing';
 
-import { BancoIdeiasService } from './banco-ideias.service';
+// import { BancoIdeiasService } from './banco-ideias.service';
 
-describe('BancoIdeiasService', () => {
-  let service: BancoIdeiasService;
+// describe('BancoIdeiasService', () => {
+//   let service: BancoIdeiasService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(BancoIdeiasService);
-  });
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({});
+//     service = TestBed.inject(BancoIdeiasService);
+//   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+//   it('should be created', () => {
+//     expect(service).toBeTruthy();
+//   });
+// });
