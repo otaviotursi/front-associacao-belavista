@@ -16,7 +16,7 @@ import { TipoEventoResponse } from 'src/app/Model/TipoEvento';
   styleUrls: ['./eventos-publicos.component.scss'],
 })
 export class EventosPublicosComponent implements OnInit {
-  titulo = 'Eventos da associação (próximos 30 dias)';
+  titulo = 'Eventos da associação';
   datePipe = new DatePipe('en-US');
 
   diaInicio: any;

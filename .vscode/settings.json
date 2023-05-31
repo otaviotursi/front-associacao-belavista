@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/549ece6b-6809-4093-ba6a-3bca3c9a7390/resourceGroups/front-ambevi-vs/providers/Microsoft.Web/sites/abelavista",
+    "appService.deploySubpath": "dist"
 }

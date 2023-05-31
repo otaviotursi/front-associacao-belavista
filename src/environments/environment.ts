@@ -7,7 +7,7 @@ export const environment: any = {
   production: false,
   communication: {
     backend: {
-      url: 'https://localhost:44315/api/'
+      url: 'https://back-ambevi.azurewebsites.net/api/'
     }
   }
 
